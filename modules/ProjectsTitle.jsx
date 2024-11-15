@@ -103,7 +103,7 @@ export default function Projects({ title, activeSection }) {
                                             </Prose>
                                             <Prose className={`mt-8 lg:translate-x-1/4 prose-p:font-light`}>
                                                 <p className='text-red fadein-content'>
-                                                    Over the years I got to work on many great projects together with brilliant designers and developers. Here are a few of my favorites:
+                                                    Over the years I got to work on many great projects together with brilliant designers and developers. As each project comes with its own requirements I have developed a great range of skills and adopted different technologies to tackle what was needed. Here are a few of my favorites:
                                                 </p>
                                             </Prose>
                                     </div>

@@ -88,7 +88,7 @@ export default function Footer() {
                     <Container className="h-full max-w-full pt-16 pb-10">
                         <div className='h-full'>
                             <div className='h-full flex flex-col lg:justify-center max-lg:pt-9'>
-                                <Prose className="max-w-full text-center flex flex-col justify-between max-lg:gap-10 lg:mt-8 prose-ul:list-none prose-li:text-2xl prose-li:lg:text-4xl prose-li:font-primary prose-li:p-0 prose-a:no-underline text-red prose-a:text-red">
+                                <Prose className="max-w-full text-center flex flex-col lg:justify-between max-lg:gap-3 lg:mt-8 prose-ul:list-none prose-li:text-2xl prose-li:lg:text-4xl prose-li:font-primary prose-li:p-0 prose-a:no-underline text-red prose-a:text-red">
                                     <ul className='flex gap-5 lg:gap-10 justify-center'>
                                         <li><Link href="mailto:jennifervobis01@gmail.com" target="_blank">Email</Link></li>
                                         <li><Link href="https://www.linkedin.com/in/jennifer-vobis" target="_blank">LinkedIn</Link></li>

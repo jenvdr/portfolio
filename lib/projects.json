@@ -1,75 +1,49 @@
 [
     {
-        "key": "antenova",
-        "name": "Antenova",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://www.google.com/",
+        "key": "oakray",
+        "name": "Oakray Renewables",
+        "link": "https://www.oakrayrenewables.co.uk/",
         "color": "#fff",
-        "image": "/assets/antenova.png",
-        "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+        "image": "/assets/oakray.png",
+        "cms": ["WordPress & HubSpot"],
+        "technologies": ["React", "NextJs", "GraphQL", "TailwindCSS"]
     },
     {
-        "key": "oakray",
-        "name": "Oakray",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://www.google.com/",
+        "key": "antenova",
+        "name": "Antenova",
+        "link": "https://www.antenova.com/",
         "color": "#FFA2B6",
-        "image": "/assets/oakray.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+        "image": "/assets/antenova.png",
+        "cms": ["WordPress & HubSpot"],
+        "technologies": ["PHP", "JavaScript", "HubL", "TailwindCSS"]
     },
     {
         "key": "2sb",
         "name": "twoSB",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "link": "https://www.2sb.co.uk/",
         "color": "#f3e7de",
         "image": "/assets/2sb.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+         "cms": ["WordPress & HubSpot"],
+         "technologies": ["React", "NextJs", "GraphQL", "HubL", "TailwindCSS"]
     },
     {
-        "key": "crsummit",
-        "name": "C&R Summit '24",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://summit.crsoftware.com/",
+        "key": "gsmasdg",
+        "name": "GSMA SDG Report '24",
+        "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/external-affairs/2024-mobile-industry-impact-report-sustainable-development-goals/",
         "color": "#fff",
-        "image": "/assets/crsummit.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+        "image": "",
+         "cms": ["WordPress"],
+         "technologies": ["PHP", "JavaScript", "TailwindCSS", "Custom Gutenberg blocks"]
     },
     {
         "key": "dmsystems",
-        "name": "DM Systems Shopify",
+        "name": "DM Systems Shop",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "link": "https://fieldsense.dplusm.co.uk/",
         "color": "#FFA2B6",
         "image": "/assets/dmsystems.png",
-         "technologies": ["JavaScript", "Shopify", "SEO"]
-    },
-    {
-        "key": "kapow",
-        "name": "Kapow",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://www.kapowprimary.com/",
-        "color": "#f3e7de",
-        "image": "/assets/kapow.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
-    },
-    {
-        "key": "epik",
-        "name": "Epik",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://www.google.com/",
-        "color": "#fff",
-        "image": "/assets/epik.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
-    },
-    {
-        "key": "m7re",
-        "name": "M7 Real Estate",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "link": "https://www.google.com/",
-        "color": "#efb11d",
-        "image": "/assets/m7re.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+         "cms": ["Shopify"],
+         "technologies": ["Liquid", "JavaScript", "SEO"]
     },
     {
         "key": "alicorn",
@@ -78,7 +52,28 @@
         "link": "https://www.google.com/",
         "color": "#fff",
         "image": "/assets/alicorn.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+         "cms": ["WordPress & HubSpot"],
+         "technologies": ["React", "NextJs", "GraphQL", "HubL", "TailwindCSS"]
+    },
+    {
+        "key": "kapow",
+        "name": "Kapow Primary",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.kapowprimary.com/",
+        "color": "#fff",
+        "image": "/assets/kapow.png",
+         "cms": ["WordPress"],
+         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
+    },
+    {
+        "key": "epik",
+        "name": "Epik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#fff",
+        "image": "/assets/epik.png",
+         "cms": ["WordPress"],
+         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
     },
     {
         "key": "weareshesays",
@@ -87,6 +82,17 @@
         "link": "https://www.google.com/",
         "color": "#f3e7de",
         "image": "/assets/weareshesays.png",
-         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+         "cms": ["WordPress"],
+         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
+    },
+    {
+        "key": "m7re",
+        "name": "M7 Real Estate",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#efb11d",
+        "image": "/assets/m7re.png",
+         "cms": ["WordPress"],
+         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
     }
 ]

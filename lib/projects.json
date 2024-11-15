@@ -1,0 +1,92 @@
+[
+    {
+        "key": "antenova",
+        "name": "Antenova",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#fff",
+        "image": "/assets/antenova.png",
+        "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "oakray",
+        "name": "Oakray",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#FFA2B6",
+        "image": "/assets/oakray.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "2sb",
+        "name": "twoSB",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.2sb.co.uk/",
+        "color": "#f3e7de",
+        "image": "/assets/2sb.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "crsummit",
+        "name": "C&R Summit '24",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://summit.crsoftware.com/",
+        "color": "#fff",
+        "image": "/assets/crsummit.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "dmsystems",
+        "name": "DM Systems Shopify",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://fieldsense.dplusm.co.uk/",
+        "color": "#FFA2B6",
+        "image": "/assets/dmsystems.png",
+         "technologies": ["JavaScript", "Shopify", "SEO"]
+    },
+    {
+        "key": "kapow",
+        "name": "Kapow",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.kapowprimary.com/",
+        "color": "#f3e7de",
+        "image": "/assets/kapow.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "epik",
+        "name": "Epik",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#fff",
+        "image": "/assets/epik.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "m7re",
+        "name": "M7 Real Estate",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#efb11d",
+        "image": "/assets/m7re.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "alicorn",
+        "name": "Alicorn",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#fff",
+        "image": "/assets/alicorn.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    },
+    {
+        "key": "weareshesays",
+        "name": "SheSays",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "link": "https://www.google.com/",
+        "color": "#f3e7de",
+        "image": "/assets/weareshesays.png",
+         "technologies": ["PHP", "JavaScript", "TailwindCSS"]
+    }
+]

@@ -60,7 +60,6 @@ export default function Navigation({ title, activeSection, availableSections }) 
           navRect.left < sectionRect.right &&
           navRect.right > sectionRect.left
         ) {
-          console.log(`activeSection: ${activeSection}`);
           setInvert(section.classList.contains('bg-yellow') && activeSection !== 'Projects' )
         }
       });

@@ -14,7 +14,7 @@ export default function Hello({ title }) {
 
         const setupAnimation = () => {
             if (timeline) {
-                timeline.kill(); // Clear any existing timeline to avoid duplication
+                timeline.kill();
             }
 
             timeline = gsap.timeline({ paused: true });
@@ -97,7 +97,7 @@ export default function Hello({ title }) {
                             </Prose>
                             <Prose className={`mt-8 fadein`}>
                                 <p className=' text-red translate-x-1/4 fade-in-content'>
-                                    Hey, thanks for stopping by! I'm a web developer from Germany based in the UK currently. I love creating beautiful, responsive websites that are easy to use and look great on any device.
+                                    Hey, thanks for stopping by! I'm a web developer from Germany based in London. I love creating beautiful, responsive websites that are easy to use and look great on any device.
                                 </p>
                             </Prose>
                         </div>

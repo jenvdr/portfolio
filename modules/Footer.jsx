@@ -1,9 +1,8 @@
-// Footer.js
 import { useEffect, useRef } from 'react';
 import Container from "@components/layout/container";
 import Prose from "@components/layout/prose";
 import Link from "next/link";
-import { gsap, ScrollTrigger } from "../lib/utils"; // Ensure gsap and ScrollTrigger are correctly imported
+import { gsap, ScrollTrigger } from "../lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,8 +71,8 @@ export default function Footer() {
                     <div className='grid grid-cols-1 lg:grid-cols-12'>
                         <div className='w-full h-[60vh] pt-[180px] pb-[112px] lg:col-span-6 lg:col-start-4 flex flex-col justify-center gap-8'>
                             <Prose>
-                                <h2 className='fade-in text-white font-medium  lg:!text-[44px] lg:!text-[80px] !leading-[.9] !mb-0'>
-                                    Before you leave..
+                                <h2 className='fade-in text-white font-medium  !text-[44px] lg:!text-[80px] !leading-[.9] !mb-0'>
+                                    Before you leave...
                                 </h2>
                             </Prose>
                             <Prose className={`lg:translate-x-1/4`}>
@@ -88,11 +87,11 @@ export default function Footer() {
                     <Container className="h-full max-w-full pt-16 pb-10">
                         <div className='h-full'>
                             <div className='h-full flex flex-col lg:justify-center max-lg:pt-9'>
-                                <Prose className="max-w-full text-center flex flex-col lg:justify-between max-lg:gap-3 lg:mt-8 prose-ul:list-none prose-li:text-2xl prose-li:lg:text-4xl prose-li:font-primary prose-li:p-0 prose-a:no-underline text-red prose-a:text-red">
+                                <Prose className="max-w-full text-center flex flex-col lg:justify-between max-lg:gap-3 lg:mt-8 prose-ul:list-none prose-li:text-2xl prose-li:lg:text-4xl prose-li:font-primary prose-li:p-0 prose-a:no-underline text-red prose-a:text-red ">
                                     <ul className='flex gap-5 lg:gap-10 justify-center'>
-                                        <li><Link href="mailto:jennifervobis01@gmail.com" target="_blank">Email</Link></li>
-                                        <li><Link href="https://www.linkedin.com/in/jennifer-vobis" target="_blank">LinkedIn</Link></li>
-                                        <li><Link href="https://github.com/jenvdr" target="_blank">GitHub</Link></li>
+                                        <li><Link className='hover:text-blue transition-colors duration-300 ease-in-out' href="mailto:jennifervobis01@gmail.com" target="_blank">Email</Link></li>
+                                        <li><Link className='hover:text-blue transition-colors duration-300 ease-in-out' href="https://www.linkedin.com/in/jennifer-vobis" target="_blank">LinkedIn</Link></li>
+                                        <li><Link className='hover:text-blue transition-colors duration-300 ease-in-out' href="https://github.com/jenvdr" target="_blank">GitHub</Link></li>
                                     </ul>
                                     <p>Design and development by Jen</p>
                                 </Prose>

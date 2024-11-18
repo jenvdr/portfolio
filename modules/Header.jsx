@@ -1,3 +1,4 @@
+// Empty module used to set up tailwind config
 import { useEffect } from 'react';
 import Container from '@components/layout/container';
 import Prose from '@components/layout/prose';
@@ -11,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Header({ title }) {
   useEffect(() => {
     gsap.to('.box', {
-      scrollTrigger: '.box', // start the animation when ".box" enters the viewport
+      scrollTrigger: '.box',
       y: 0
     });
   }, []);

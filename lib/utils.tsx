@@ -1,7 +1,7 @@
+import gsap from "gsap";
 import { useEffect, useLayoutEffect } from "react";
 import { twMerge } from "tailwind-merge";
 import { clsx, type ClassValue } from "clsx";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";

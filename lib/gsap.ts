@@ -1,5 +1,3 @@
-// src/lib/gsap/index.tsx
-
 import gsap from "gsap";
 import { CustomEase } from "gsap/dist/CustomEase";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -24,19 +22,16 @@ const STAGGER = 0.5;
 const FADEDISTANCE = 100;
 const EASE = CustomEase.create("custom", "M0,0 C0.35,0.86 0.9,1 1,1 ");
 
-// Configuring GSAP with custom settings that aren't Tween-specific
 gsap.config({
   autoSleep: 60,
   nullTargetWarn: false,
 });
 
-// Setting default animation properties that should be inherited by ALL tweens
 gsap.defaults({
   duration: DURATION,
   ease: "power2.out",
 });
 
-// Once the desired configurations are set, we simply export what we need to work with in the future.
 export {
   DURATION,
   EASE,

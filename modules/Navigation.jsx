@@ -16,9 +16,6 @@ export default function Navigation({ title, activeSection, availableSections }) 
 
     const timeline = gsap.timeline({
       paused: true,
-      onComplete: () => {
-        // optional
-      }
     });
 
     timeline.fromTo(
@@ -48,42 +45,29 @@ export default function Navigation({ title, activeSection, availableSections }) 
 
   }, []);
 
-  // Function to log the background color of the section when the nav overlaps it
-  const logSectionColor = (section) => {
-    const computedStyle = window.getComputedStyle(section);
-    const bgColor = computedStyle.backgroundColor;
-    setInvert(section.classList.contains('bg-yellow') && activeSection !== 'Projects' );
-  };
-
   useEffect(() => {
     const navElement = navRef.current;
 
     const checkOverlap = () => {
-      const navRect = navElement.getBoundingClientRect(); // Get nav element position
-      const sections = document.querySelectorAll('.background'); // Sections to observe
+      const navRect = navElement.getBoundingClientRect();
+      const sections = document.querySelectorAll('.background');
 
       sections.forEach((section) => {
-        const sectionRect = section.getBoundingClientRect(); // Get section position
-
-        // Check if the nav element overlaps the section (based on positions)
+        const sectionRect = section.getBoundingClientRect();
         if (
           navRect.top < sectionRect.bottom &&
           navRect.bottom > sectionRect.top &&
           navRect.left < sectionRect.right &&
           navRect.right > sectionRect.left
         ) {
-          // Log the background color of the section if it overlaps
           console.log(`activeSection: ${activeSection}`);
           setInvert(section.classList.contains('bg-yellow') && activeSection !== 'Projects' )
-        //   logSectionColor(section => setInvert(section.classList.contains('bg-yellow') && activeSection !== 'Projects' ));
         }
       });
     };
 
-    // Listen to the scroll event and check for overlap
     window.addEventListener('scroll', checkOverlap);
 
-    // Cleanup on unmount
     return () => {
       window.removeEventListener('scroll', checkOverlap);
     };
@@ -111,7 +95,7 @@ export default function Navigation({ title, activeSection, availableSections }) 
           return (
             <div key={section} className={`group-data-[invert=true]:!bg-white/45 group-data-[invert=true]:group-hover:md:!bg-white md:px-3 py-1 rounded-md max-md:text-right`} data-index={index}>
               <Link href={`#${section}`}
-                className={`tracking-widest hover:text-red transition-all ease-in-out duration-200 max-md:text-right max-md:text-lg`}
+                className={`tracking-widest hover:text-blue transition-colors duration-300 max-md:text-right max-md:text-lg`}
               >
                 {section}
               </Link>

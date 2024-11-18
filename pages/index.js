@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Header from 'modules/Header';
+// import Header from 'modules/Header';
 import Footer from 'modules/Footer';
 import Hello from 'modules/Hello';
 import Projects from 'modules/Projects';
 import ProjectsTitle from 'modules/ProjectsTitle';
-import Contact from 'modules/Contact';
 import Navigation from 'modules/Navigation';
 import { gsap, ScrollTrigger } from "../lib/gsap";
 import { SectionProvider } from '../lib/sectionContext';
@@ -21,13 +20,11 @@ export default function Home() {
 
       const sections = gsap.utils.toArray('.section');
 
-      // Initialize ScrollTriggers
       sections.forEach((section) => {
         ScrollTrigger.create({
           trigger: section,
           start: 'top center',
           end: 'bottom center',
-          // markers: true,
           onEnter: () => setActiveSection(section.getAttribute('data-id')),
           onEnterBack: () => setActiveSection(section.getAttribute('data-id')),
           onLeave: () => {
@@ -56,7 +53,7 @@ export default function Home() {
               </Head>
 
               <main className='group/controller relative' data-active-section={activeSection}>
-                  <Header title="Jen Vobis | Web Developer" />
+                  {/* <Header title="Jen Vobis | Web Developer" /> */}
                   <Hello />
                   <div className='relative'>
                       <ProjectsTitle />

@@ -23,6 +23,9 @@ module.exports = {
     "bg-[#D6536D]",
     "bg-[#E43D12]",
     "bg-[#f3e7de]",
+    "bg-white",
+    "bg-white-off",
+    "bg-blue"
   ],
   theme: {
     colors: {
@@ -39,6 +42,9 @@ module.exports = {
       },
       yellow: {
             DEFAULT: "#EFB11D",
+      },
+      blue: {
+        DEFAULT: "rgba(64, 87, 255, 1)",
       },
       black: {
             DEFAULT: "#000000",

@@ -30,7 +30,7 @@ const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
     }, []);
 
     return (
-        <Link data-color={project.color} test={itemWidth} ref={projectCardRef} href={project.link} target="_blank" data-order={order} key={project.key} data-width={itemWidth == 'lg:w-[40%]' ? 'small' : 'large'} className={cn(`group/parent peer min-h-[180px] lg:h-[325px] w-full md:w-[50%] ${itemWidth} data-[width=small]:hover:lg:w-[60%] data-[width=large]:peer-hover:lg:w-[40%] transition-all duration-500 ease-in-out flex justify-center items-center`, className)}>
+        <Link aria-label={project.name} title={project.name} data-color={project.color} test={itemWidth} ref={projectCardRef} href={project.link} target="_blank" data-order={order} key={project.key} data-width={itemWidth == 'lg:w-[40%]' ? 'small' : 'large'} className={cn(`group/parent peer min-h-[180px] lg:h-[325px] w-full md:w-[50%] ${itemWidth} data-[width=small]:hover:lg:w-[60%] data-[width=large]:peer-hover:lg:w-[40%] transition-all duration-500 ease-in-out flex justify-center items-center`, className)}>
             <div className={`fade-in relative h-full w-full rounded-[22px] rounded-tl-none border-[1px] border-white-off overflow-hidden bg-${project.color}`}>
                 <div className={`h-full flex flex-col justify-between w-full p-5 lg:p-7`}>
                     <Prose className='max-w-none flex justify-between prose-ul:list-none prose-ul:p-0 prose-ul:m-0 prose-li:m-0 prose-li:max-md:text-xs  prose-li:lg:text-sm prose-li:p-0 text-red group-data-[color=blue]/parent:text-white prose-li:font-medium'>

@@ -94,7 +94,7 @@ export default function Navigation({ title, activeSection, availableSections }) 
           if (section === activeSection) return null;
           return (
             <div key={section} className={`group-data-[invert=true]:!bg-white/45 group-data-[invert=true]:group-hover:md:!bg-white md:px-3 py-1 rounded-md max-md:text-right`} data-index={index}>
-              <Link href={`#${section}`}
+              <Link aria-label={section} title={section} href={`#${section}`}
                 className={`tracking-widest hover:text-blue transition-colors duration-300 max-md:text-right max-md:text-lg`}
               >
                 {section}

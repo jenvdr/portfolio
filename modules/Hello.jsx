@@ -97,7 +97,7 @@ export default function Hello({ title }) {
                             </Prose>
                             <Prose className={`mt-8 fadein`}>
                                 <p className=' text-red translate-x-1/4 fade-in-content'>
-                                    Hey, thanks for stopping by! I'm a web developer from Germany based in London. I love creating beautiful, responsive websites that are easy to use and look great on any device.
+                                    Hey, thanks for stopping by! I'm a creative web developer with a lot of love for creating beautiful, responsive websites that are easy to use and look great on any device. Please take a look around and leave me a message if you have an exciting project you'd like to work on together.
                                 </p>
                             </Prose>
                         </div>

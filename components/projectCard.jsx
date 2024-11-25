@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
     const projectCardRef = useRef(null);
+    const marqueeRef = useRef(null);
 
     useEffect(() => {
         const mm = gsap.matchMedia();
@@ -29,37 +30,49 @@ const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
             });
     }, []);
 
-
     useEffect(() => {
-        const card = projectCardRef.current;
+        const marqueeElement = marqueeRef.current;
+        if (!marqueeElement) return;
 
-        if (!card) return;
+        const marqueeContent = marqueeElement.querySelector(".marquee-content");
 
-        const marqueeText = card.querySelector('.marquee-content');
-
-        const scrollAnimation = gsap.timeline({ paused: true });
-
-        // Calculate width of the text and parent container
-        const textWidth = marqueeText.offsetWidth;
-        const parentWidth = marqueeText.parentElement.offsetWidth;
-
-        if (textWidth > parentWidth) {
-            scrollAnimation.to(marqueeText, {
-                x: -(textWidth - parentWidth), // Move left to show hidden text
-                duration: (textWidth - parentWidth) / 50, // Speed adjustment
-                ease: "linear",
-                repeat: -1,
-            });
-
-            card.addEventListener("mouseenter", () => {
-                scrollAnimation.play()
-            });
-            card.addEventListener("mouseleave", () => scrollAnimation.pause());
+        if (!marqueeContent) {
+            console.error("Marquee content not found");
+            return;
         }
 
-        return () => {
-            scrollAnimation.kill();
-        };
+        const textWidth = marqueeContent.offsetWidth;
+        const parentWidth = marqueeElement.offsetWidth;
+
+        // Log dimensions for debugging
+        console.log(`Text width: ${textWidth}, Parent width: ${parentWidth}`);
+
+        if (textWidth > parentWidth) {
+            // Define the scrolling animation
+            const scrollAnimation = gsap.timeline({ paused: true });
+
+            scrollAnimation.to(marqueeContent, {
+                x: "-50px",
+                duration: ".3",
+            });
+
+            // Add event listeners for hover
+            marqueeElement.addEventListener("mouseenter", () => {
+                console.log("Hover detected, starting animation");
+                // console.log(`scrollAnimation:`, scrollAnimation);
+                scrollAnimation.play();
+            });
+
+            marqueeElement.addEventListener("mouseleave", () => {
+                console.log("Hover ended, pausing animation");
+                scrollAnimation.pause();
+            });
+
+            // Cleanup on component unmount
+            return () => {
+                scrollAnimation.kill();
+            };
+        }
     }, []);
 
     return (
@@ -77,19 +90,21 @@ const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
                             <ul className='!px-2'>{project.technologies?.map((technology, x) => <li key={x}>{technology}</li>)}</ul>
                         </div>
                     </Prose>
-                    <Prose className="">
+                    <Prose>
                         <h3
-                            className='group-hover/parent:lg:translate-y-[calc(100%+50px)] group-hover/parent:lg:-scale-y-100 transition-transform duration-500 ease-out text-red group-data-[color=blue]/parent:text-white display font-medium !leading-[.9] !mb-0'
+                            className='scale-100 group-hover/parent:lg:scale-150 origin-left transition-transform duration-500 ease-out text-red group-data-[color=blue]/parent:text-white display font-medium !leading-[.9] !mb-0'
                             ref={projectCardRef}
                         >
                                 {project.name}
                         </h3>
                     </Prose>
                 </div>
-                <div className='p-2 whitespace-nowrap absolute bottom-0 left-0 right-0 text-red group-data-[color=blue]/parent:text-white text-[90px] leading-[.9em] font-primary -scale-y-100 translate-y-[calc(100%+20px)] group-hover/parent:lg:translate-y-0 group-hover/parent:lg:scale-y-100 transition-transform duration-500 ease-in-out marquee-text'>
-                    <span className="marquee-content">{project.name}
-                    </span>
-                </div>
+                {/* <div
+                    ref={marqueeRef}
+                    className="p-2 whitespace-nowrap absolute bottom-0 left-0 right-0 text-red group-data-[color=blue]/parent:text-white text-[90px] leading-[.9em] font-primary -scale-y-100 translate-y-[calc(100%+20px)] group-hover/parent:lg:translate-y-0 group-hover/parent:lg:scale-y-100 transition-transform duration-500 ease-in-out marquee-text"
+                >
+                    <span className="marquee-content">{project.name}</span>
+                </div> */}
             </div>
         </Link>
     )

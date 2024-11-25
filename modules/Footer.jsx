@@ -77,7 +77,7 @@ export default function Footer() {
                             </Prose>
                             <Prose className={`lg:translate-x-1/4`}>
                                 <p className='text-white fade-in'>
-                                    In German we say 'Aufwiedersehen' which means 'until we see each other again', so if you like my work and have a cool project you'd like to chat about please don't hesitate to reach out to me. Below are some ways you can contact me. Thank you and Aufwiedersehen!
+                                    In my home country of Germany we say 'Aufwiedersehen' which means 'until we see each other again', so if you like my work and have a cool project you'd like to chat about please don't hesitate to reach out to me. Below are some ways you can contact me. Thank you and Aufwiedersehen!
                                 </p>
                             </Prose>
                         </div>

@@ -15,7 +15,7 @@
         "color": "blue",
         "image": "/assets/antenova.png",
         "cms": ["WordPress & HubSpot"],
-        "technologies": ["PHP", "JavaScript", "HubL", "TailwindCSS"]
+        "technologies": ["WooCommerce", "PHP", "JavaScript", "HubL", "TailwindCSS"]
     },
     {
         "key": "2sb",

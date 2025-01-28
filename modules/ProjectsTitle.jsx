@@ -101,7 +101,7 @@ export default function Projects({ title, activeSection }) {
                                             <Prose className={`lg:w-max`}>
                                                 <h2 className='fade-in text-red font-medium !leading-[.9] !mb-0'>A few projects I have contributed to</h2>
                                             </Prose>
-                                            <Prose className={`mt-8 lg:translate-x-1/4 prose-p:font-light`}>
+                                            <Prose className={`mt-8 lg:translate-x-1/4`}>
                                                 <p className='text-red fadein-content'>
                                                     Over the years I got to work on many great projects together with brilliant designers and developers. As each project comes with its own requirements I have developed a great range of skills and adopted different technologies to tackle what was needed. Here are a few of my favorites:
                                                 </p>

@@ -148,7 +148,7 @@ module.exports = {
                 lineHeight: 1.5,
                 marginBottom: rem(12, 16),
                 marginTop: rem(12, 16),
-                fontWeight: 200,
+                fontWeight: 500,
               },
               ul: {
                 marginBottom: rem(12, 16),
@@ -186,7 +186,7 @@ module.exports = {
                 lineHeight: 1.5,
                 marginBottom: rem(12, 18),
                 marginTop: rem(12, 18),
-                fontWeight: 200,
+                fontWeight: 500,
               },
               ul: {
                 marginBottom: rem(12, 18),

@@ -6,7 +6,8 @@
         "color": "white",
         "image": "/assets/oakray.png",
         "cms": ["Headless WordPress & HubSpot"],
-        "technologies": ["React", "NextJs", "GraphQL", "TailwindCSS"]
+        "technologies": ["React", "NextJs", "GraphQL", "TailwindCSS"],
+        "category": "headless"
     },
     {
         "key": "antenova",
@@ -15,7 +16,8 @@
         "color": "blue",
         "image": "/assets/antenova.png",
         "cms": ["WordPress & HubSpot"],
-        "technologies": ["WooCommerce", "PHP", "JavaScript", "HubL", "TailwindCSS"]
+        "technologies": ["WooCommerce", "PHP", "JavaScript", "HubL", "TailwindCSS"],
+        "category": ""
     },
     {
         "key": "2sb",
@@ -23,17 +25,29 @@
         "link": "https://www.2sb.co.uk/",
         "color": "white-off",
         "image": "/assets/2sb.png",
-         "cms": ["Headless WordPress"],
-         "technologies": ["React", "NextJs", "GraphQL", "TailwindCSS"]
+        "cms": ["Headless WordPress"],
+        "technologies": ["React", "NextJs", "GraphQL", "TailwindCSS"],
+        "category": "headless"
     },
     {
         "key": "gsmasdg",
-        "name": "GSMA SDG Report '24",
+        "name": "GSMA - SDG Report '24",
         "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/external-affairs/2024-mobile-industry-impact-report-sustainable-development-goals/",
         "color": "white",
         "image": "",
-         "cms": ["WordPress"],
-         "technologies": ["PHP", "JavaScript", "TailwindCSS", "Custom Gutenberg blocks"]
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "TailwindCSS", "Custom Gutenberg blocks"],
+        "category": "forGood"
+    },
+    {
+        "key": "gsmahcc",
+        "name": "GSMA - The Humanitarian Connectivity Charter",
+        "link": "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/mobile-for-humanitarian-innovation/humanitarian-connectivity-charter/",
+        "color": "white",
+        "image": "",
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "TailwindCSS", "Custom Gutenberg blocks"],
+        "category": "forGood"
     },
     {
         "key": "dmsystems",
@@ -42,8 +56,9 @@
         "link": "https://fieldsense.dplusm.co.uk/",
         "color": "blue",
         "image": "/assets/dmsystems.png",
-         "cms": ["Shopify"],
-         "technologies": ["Liquid", "JavaScript", "SEO"]
+        "cms": ["Shopify"],
+        "technologies": ["Liquid", "JavaScript", "SEO"],
+        "category": ""
     },
     {
         "key": "alicorn",
@@ -52,8 +67,9 @@
         "link": "https://alicorn-vp.com/",
         "color": "white",
         "image": "/assets/alicorn.png",
-         "cms": ["WordPress & HubSpot"],
-         "technologies": ["React", "NextJs", "GraphQL", "HubL", "TailwindCSS"]
+        "cms": ["Headless WordPress & HubSpot"],
+        "technologies": ["React", "NextJs", "GraphQL", "HubL", "TailwindCSS"],
+        "category": "headless"
     },
     {
         "key": "kapow",
@@ -62,8 +78,9 @@
         "link": "https://www.kapowprimary.com/",
         "color": "white",
         "image": "/assets/kapow.png",
-         "cms": ["WordPress"],
-         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"],
+        "category": ""
     },
     {
         "key": "epik",
@@ -72,8 +89,9 @@
         "link": "https://helloepik.com/",
         "color": "white",
         "image": "/assets/epik.png",
-         "cms": ["WordPress"],
-         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"],
+        "category": ""
     },
     {
         "key": "weareshesays",
@@ -82,8 +100,9 @@
         "link": "https://weareshesays.com/",
         "color": "white-off",
         "image": "/assets/weareshesays.png",
-         "cms": ["WordPress"],
-         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"],
+        "category": "forGood"
     },
     {
         "key": "m7re",
@@ -92,7 +111,8 @@
         "link": "https://www.m7re.eu/",
         "color": "#efb11d",
         "image": "/assets/m7re.png",
-         "cms": ["WordPress"],
-         "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"]
-    }
+        "cms": ["WordPress"],
+        "technologies": ["PHP", "JavaScript", "jQuery", "SCSS"],
+        "category": ""
+        }
 ]

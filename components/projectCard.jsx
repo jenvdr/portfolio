@@ -76,7 +76,7 @@ const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
     }, []);
 
     return (
-        <Link aria-label={project.name} title={project.name} data-color={project.color} test={itemWidth} ref={projectCardRef} href={project.link} target="_blank" data-order={order} key={project.key} data-width={itemWidth == 'lg:w-[40%]' ? 'small' : 'large'} className={cn(`group/parent peer min-h-[180px] lg:h-[325px] w-full md:w-[50%] ${itemWidth} data-[width=small]:hover:lg:w-[60%] data-[width=large]:peer-hover:lg:w-[40%] transition-all duration-500 ease-in-out flex justify-center items-center`, className)}>
+        <Link aria-label={project.name} title={project.name} data-color={project.color} test={itemWidth} ref={projectCardRef} href={project.link} target="_blank" data-order={order} key={project.key} data-width={itemWidth == 'lg:w-[40%]' ? 'small' : 'large'} className={cn(`group/parent peer min-h-[180px] lg:h-[325px] w-full md:w-[50%] ${itemWidth} data-[width=small]:hover:lg:w-[60%] data-[width=large]:peer-hover:lg:w-[40%] transition-all duration-500 ease-in-out flex justify-center items-center focus:ring-1 focus:ring-red focus:ring-offset-4 outline-none rounded-[22px] rounded-tl-none`, className)}>
             <div className={`fade-in relative h-full w-full rounded-[22px] rounded-tl-none border-[1px] border-white-off overflow-hidden bg-${project.color}`}>
                 <div className={`h-full flex flex-col justify-between w-full p-5 lg:p-7`}>
                     <Prose className='max-w-none flex justify-between prose-ul:list-none prose-ul:p-0 prose-ul:m-0 prose-li:m-0 prose-li:max-md:text-xs  prose-li:lg:text-sm prose-li:p-0 text-red group-data-[color=blue]/parent:text-white prose-li:font-medium'>
@@ -92,19 +92,13 @@ const projectCard = ({ className, order, project, itemWidth, indexVis }) => {
                     </Prose>
                     <Prose>
                         <h3
-                            className='scale-100 group-hover/parent:lg:scale-150 origin-left transition-transform duration-500 ease-out text-red group-data-[color=blue]/parent:text-white display font-medium !leading-[.9] !mb-0'
+                            className='scale-100 group-hover/parent:lg:scale-150 lg:max-w-96 origin-left transition-transform duration-500 ease-out text-red group-data-[color=blue]/parent:text-white display font-medium !leading-[.9] !mb-0'
                             ref={projectCardRef}
                         >
                                 {project.name}
                         </h3>
                     </Prose>
                 </div>
-                {/* <div
-                    ref={marqueeRef}
-                    className="p-2 whitespace-nowrap absolute bottom-0 left-0 right-0 text-red group-data-[color=blue]/parent:text-white text-[90px] leading-[.9em] font-primary -scale-y-100 translate-y-[calc(100%+20px)] group-hover/parent:lg:translate-y-0 group-hover/parent:lg:scale-y-100 transition-transform duration-500 ease-in-out marquee-text"
-                >
-                    <span className="marquee-content">{project.name}</span>
-                </div> */}
             </div>
         </Link>
     )

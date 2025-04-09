@@ -53,13 +53,12 @@ export default function Home() {
               </Head>
 
               <main className='group/controller relative' data-active-section={activeSection}>
-                  {/* <Header title="Jen Vobis | Web Developer" /> */}
+                  <Navigation activeSection={activeSection} availableSections={availableSections} />
                   <Hello />
                   <div className='relative'>
                       <ProjectsTitle />
                       <Projects projects={projects} />
                   </div>
-                  <Navigation activeSection={activeSection} availableSections={availableSections} />
               </main>
 
               <Footer />

@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
-// import Header from 'modules/Header';
 import Footer from "modules/Footer";
 import Hello from "modules/Hello";
-import Projects from "modules/Projects";
-import ProjectsTitle from "modules/ProjectsTitle";
+import Projects from "modules/Projects/Projects";
 import Navigation from "modules/Navigation";
 import { gsap, ScrollTrigger } from "../lib/gsap";
 import { SectionProvider } from "../lib/sectionContext";
-import projects from "../lib/projects.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,10 +63,7 @@ export default function Home() {
                         availableSections={availableSections}
                     />
                     <Hello />
-                    <div className="relative">
-                        <ProjectsTitle />
-                        <Projects projects={projects} />
-                    </div>
+                    <Projects />
                 </main>
 
                 <Footer />

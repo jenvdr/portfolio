@@ -20,7 +20,7 @@ export default function Projects({ title, projects, activeSection }) {
     let remainingPairs;
 
     const filteredProjects = projects.filter((project) => {
-        if (activeCategory === "all") return true;
+        if (activeCategory === "initial") return true;
         return project.category === activeCategory;
     });
 

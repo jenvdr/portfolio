@@ -6,52 +6,44 @@ import { useGSAP, gsap, ScrollTrigger } from "../../lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Projects({ title, activeSection }) {
-    const projectsTitleRef = useRef(null);
+export default function Projects() {
+    const projectsTitleSectionRef = useRef(null);
     const projectsTitleTextRef = useRef(null);
 
     useEffect(() => {
         const mm = gsap.matchMedia();
 
-        const timeline = gsap.timeline({
-            paused: true,
-        });
-
         const tl = gsap.timeline({
             paused: true,
         });
 
-        tl.fromTo(
-            projectsTitleRef.current.querySelectorAll(".slidein"),
-            { scale: 0.9, y: "50vh" },
-            { scale: 1, y: 0, duration: 1 }
+        const tle = gsap.timeline({
+            paused: true,
+        });
+
+        tle.fromTo(
+            projectsTitleTextRef.current.querySelectorAll(".stagger-in"),
+            { opacity: 0, x: 250 },
+            { opacity: 1, x: 0, duration: 1, stagger: 0.2 }
         );
 
-        timeline.fromTo(
-            projectsTitleTextRef.current.querySelectorAll(".fade-in"),
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, stagger: 0.2 },
-            "<50%"
-        );
-
-        timeline.fromTo(
-            projectsTitleTextRef.current.querySelector(".fadein-content"),
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, stagger: 0.2 },
-            "<50%"
-        );
+        ScrollTrigger.create({
+            trigger: projectsTitleTextRef.current,
+            animation: tle,
+            start: "top 100%",
+            end: "bottom 0%",
+            scrub: true,
+            // markers: true,
+        });
 
         mm.add("(min-width: 768px)", () => {
+            tl.fromTo(
+                projectsTitleSectionRef.current.querySelectorAll(".slidein"),
+                { scale: 0.9, y: "50vh" },
+                { scale: 1, y: 0, duration: 1 }
+            );
             ScrollTrigger.create({
-                trigger: projectsTitleTextRef.current,
-                start: "top top",
-                scrub: true,
-                onEnter: () => timeline.play(),
-                oonLeaveBack: () => timeline.reverse(),
-            });
-
-            ScrollTrigger.create({
-                trigger: projectsTitleRef.current,
+                trigger: projectsTitleSectionRef.current,
                 animation: tl,
                 pin: true,
                 snap: 1 / 3,
@@ -61,65 +53,68 @@ export default function Projects({ title, activeSection }) {
         });
 
         mm.add("(max-width: 767px)", () => {
+            tl.fromTo(
+                projectsTitleSectionRef.current.querySelectorAll("h2"),
+                { y: "40px" },
+                { y: 0, duration: 1 }
+            );
             ScrollTrigger.create({
-                trigger: projectsTitleTextRef.current,
-                start: "top 80%",
-                scrub: true,
-                onEnter: () => timeline.play(),
-                oonLeaveBack: () => timeline.reverse(),
-            });
-
-            ScrollTrigger.create({
-                trigger: projectsTitleRef.current,
+                trigger: projectsTitleSectionRef.current,
                 animation: tl,
-                start: "top 90%",
-                scrub: true,
-                snap: false,
+                // pin: true,
+                // snap: 1 / 3,
+                // end: () => `+=${window.innerHeight * 2}`,
+                // scrub: true,
             });
         });
-
-        if (ScrollTrigger.isInViewport(projectsTitleRef.current)) {
-            timeline.play();
-        }
-
-        return () => {
-            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-        };
     }, []);
 
     return (
         <section
             className={`section background bg-white-off`}
-            ref={projectsTitleRef}
+            ref={projectsTitleSectionRef}
             id={"ProjectsTitle"}
             data-id={`Projects`}
         >
             <div
-                className={`bg-white slidein rounded-t-[22px] overflow-hidden`}
+                className={`bg-white slidein rounded-t-[22px] overflow-hidden relative max-lg:py-12`}
             >
-                <Prose className={`lg:max-w-full`}>
-                    <h2 className="fade-in text-red text-center font-medium !leading-[.75] !mb-0 lg:text-[11em]">
+                <Prose className={`lg:absolute lg:inset-0 max-w-full`}>
+                    <h2 className="fade-in text-red text-center font-medium !leading-[.75] !mb-0 text-[5em] md:text-[6em] lg:text-[8em] xl:text-[9.3em] 2xl:text-[11em]">
                         Featured Projects
                     </h2>
                 </Prose>
-                <Container className={`pb-[100px]`}>
-                    <div className="fade w-full max-lg:pt-20 lg:min-h-screen flex">
-                        <div
-                            className="max-w-none overflow--hidden"
-                            ref={projectsTitleTextRef}
-                        >
-                            <Prose className={`mt-8 lg:translate-x-1/4`}>
-                                <p className="text-red fadein-content">
+                <Container
+                    className={`fade w-full lg:min-h-screen  max-lg:pt-20 flex justify-center items-center`}
+                >
+                    <div className="max-w-none overflow--hidden">
+                        <Prose className={`lg:text-xl`}>
+                            <p
+                                className="text-red  text-pretty fade-in"
+                                ref={projectsTitleTextRef}
+                            >
+                                <span className="block stagger-in">
                                     Over the years I got to work on many great
-                                    projects together with brilliant designers
-                                    and developers. As each project comes with
-                                    its own requirements I have developed a
-                                    great range of skills and adopted different
-                                    technologies to tackle what was needed. Here
-                                    are a few of my favorites:
-                                </p>
-                            </Prose>
-                        </div>
+                                    projects
+                                </span>
+                                <span className="block stagger-in">
+                                    together with brilliant designers and
+                                    developers.
+                                </span>
+                                <span className="block stagger-in">
+                                    As each project comes with its own
+                                    requirements I have
+                                </span>
+                                <span className="block stagger-in">
+                                    developed a great range of skills and
+                                    adopted different technologies
+                                </span>
+                                <span className="block stagger-in">
+                                    to tackle what was needed. Check out some of
+                                    my favourites below.
+                                </span>
+                            </p>
+                        </Prose>
                     </div>
                 </Container>
             </div>

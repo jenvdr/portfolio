@@ -58,6 +58,7 @@ export default function Home() {
                     className="group/controller relative"
                     data-active-section={activeSection}
                 >
+                    <div className="navigation-circle absolute -translate-x-1/2 -translate-y-1/2 -z-10 bg-yellow rounded-full aspect-square w-[450px] group-hover:scale-[1.3] origin-center transition-all ease-in-out duration-200" />
                     <Navigation
                         activeSection={activeSection}
                         availableSections={availableSections}

@@ -7,10 +7,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Hello({ title }) {
     const ref = useRef(null);
+    const textRef = useRef(null);
 
     useEffect(() => {
         const mm = gsap.matchMedia();
         let timeline;
+
+        const tle = gsap.timeline({
+            paused: true,
+        });
+
+        tle.fromTo(
+            textRef.current.querySelectorAll(".stagger-in"),
+            { opacity: 0, x: 250 },
+            { opacity: 1, x: 0, duration: 0.5, stagger: 0.4 }
+        );
+
+        tle.play();
 
         const setupAnimation = () => {
             if (timeline) {
@@ -46,8 +59,8 @@ export default function Hello({ title }) {
             mm.add("(min-width: 768px)", () => {
                 timeline.fromTo(
                     ref.current.querySelectorAll(".fade-in"),
-                    { opacity: 0, y: 50 },
-                    { opacity: 1, y: 0, duration: 0.5 }
+                    { opacity: 0, x: 250 },
+                    { opacity: 1, x: 0, duration: 0.5 }
                 );
                 timeline.fromTo(
                     ref.current.querySelector(".rolling-circle"),
@@ -57,8 +70,8 @@ export default function Hello({ title }) {
                 );
                 timeline.fromTo(
                     ref.current.querySelectorAll(".fade-in-sub"),
-                    { opacity: 0, y: 50, x: "25%" },
-                    { opacity: 1, y: 0, x: "25%", duration: 0.5 }
+                    { opacity: 0, x: 250 },
+                    { opacity: 1, x: "25%", duration: 0.5, stagger: 0.4 }
                 );
                 timeline.fromTo(
                     ref.current.querySelectorAll(".fade-in-content"),
@@ -99,15 +112,28 @@ export default function Hello({ title }) {
                                     Web Developer
                                 </h2>
                             </Prose>
-                            <Prose className={`mt-8 fadein`}>
-                                <p className=" text-red translate-x-1/4 fade-in-content">
-                                    Hey, thanks for stopping by! I'm a creative
-                                    web developer with a lot of love for
-                                    creating beautiful, responsive websites that
-                                    are easy to use and look great on any
-                                    device. Please take a look around and leave
-                                    me a message if you have an exciting project
-                                    you'd like to work on together.
+                            <Prose className={`mt-8 fadein lg:text-xl`}>
+                                <p
+                                    className=" text-red translate-x-1/4 fade-in-content"
+                                    ref={textRef}
+                                >
+                                    <span className="block stagger-in">
+                                        Hey, thanks for stopping by! I'm a
+                                        creative web developer with a lot of
+                                        love
+                                    </span>
+                                    <span className="block stagger-in">
+                                        for creating beautiful, responsive
+                                        websites that are easy to use and look
+                                    </span>
+                                    <span className="block stagger-in">
+                                        great on any device. Please take a look
+                                        around and leave me a message if
+                                    </span>
+                                    <span className="block stagger-in">
+                                        you have an exciting project you'd like
+                                        to work on together.
+                                    </span>
                                 </p>
                             </Prose>
                         </div>

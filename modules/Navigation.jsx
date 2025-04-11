@@ -10,7 +10,7 @@ export default function Navigation({
     availableSections,
 }) {
     const sectionRef = useRef(null);
-    const navRef = useRef(null); // Reference for the navigation element
+    const navRef = useRef(null);
     const renderedSections = new Set();
     const [active, setActive] = useState(false);
     const [invert, setInvert] = useState(false);

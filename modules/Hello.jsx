@@ -10,13 +10,9 @@ export default function Hello({ title }) {
     const textRef = useRef(null);
 
     useEffect(() => {
-        const mm = gsap.matchMedia();
-        let timeline;
-
         const tle = gsap.timeline({
             paused: true,
         });
-
         tle.fromTo(
             textRef.current.querySelectorAll(".stagger-in"),
             { opacity: 0, x: 250 },
@@ -25,74 +21,59 @@ export default function Hello({ title }) {
 
         tle.play();
 
-        const setupAnimation = () => {
-            if (timeline) {
-                timeline.kill();
-            }
+        const mm = gsap.matchMedia();
+        let timeline;
 
-            timeline = gsap.timeline({ paused: true });
+        if (timeline) {
+            timeline.kill();
+        }
 
-            mm.add("(max-width: 767px)", () => {
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in"),
-                    { opacity: 0, y: 50, x: 0 },
-                    { opacity: 1, y: 0, x: 0, duration: 0.5 }
-                );
-                timeline.fromTo(
-                    ref.current.querySelector(".rolling-circle"),
-                    { opacity: 0, x: "-100%", y: "-100%" },
-                    { opacity: 1, x: "-50%", y: "-50%", duration: 0.5 },
-                    "<"
-                );
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in-sub"),
-                    { opacity: 0, y: 50, x: 0 },
-                    { opacity: 1, y: 0, x: 0, duration: 0.5 }
-                );
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in-content"),
-                    { opacity: 0, y: 50, x: 0 },
-                    { opacity: 1, y: 0, x: 0, duration: 0.5 }
-                );
-            });
+        timeline = gsap.timeline({ paused: true });
 
-            mm.add("(min-width: 768px)", () => {
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in"),
-                    { opacity: 0, x: 250 },
-                    { opacity: 1, x: 0, duration: 0.5 }
-                );
-                timeline.fromTo(
-                    ref.current.querySelector(".rolling-circle"),
-                    { opacity: 0, x: "-100%", y: "-100%" },
-                    { opacity: 1, x: "-50%", y: "-50%", duration: 0.5 },
-                    "<"
-                );
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in-sub"),
-                    { opacity: 0, x: 250 },
-                    { opacity: 1, x: "25%", duration: 0.5, stagger: 0.4 }
-                );
-                timeline.fromTo(
-                    ref.current.querySelectorAll(".fade-in-content"),
-                    { opacity: 0, y: 50, x: "25%" },
-                    { opacity: 1, y: 0, x: "25%", duration: 0.5 }
-                );
-            });
+        mm.add("(max-width: 767px)", () => {
+            timeline.fromTo(
+                ref.current.querySelectorAll(".fade-in"),
+                { opacity: 0, y: 50, x: 0 },
+                { opacity: 1, y: 0, x: 0, duration: 0.5 }
+            );
+            timeline.fromTo(
+                ref.current.querySelector(".rolling-circle"),
+                { opacity: 0, x: "-100%", y: "-100%" },
+                { opacity: 1, x: "-50%", y: "-50%", duration: 0.5 },
+                "<"
+            );
+            timeline.fromTo(
+                ref.current.querySelectorAll(".fade-in-content"),
+                { opacity: 0, y: 50, x: 0 },
+                { opacity: 1, y: 0, x: 0, duration: 0.5 }
+            );
+        });
 
-            timeline.play();
-        };
-        setupAnimation();
-        const handleResize = () => {
-            setupAnimation();
-        };
+        mm.add("(min-width: 768px)", () => {
+            timeline.fromTo(
+                ref.current.querySelectorAll(".fade-in"),
+                { opacity: 0, x: 250 },
+                { opacity: 1, x: 0, duration: 0.5 }
+            );
+            timeline.fromTo(
+                ref.current.querySelector(".rolling-circle"),
+                { opacity: 0, x: "-100%", y: "-100%" },
+                { opacity: 1, x: "-50%", y: "-50%", duration: 0.5 },
+                "<"
+            );
+            timeline.fromTo(
+                ref.current.querySelectorAll(".fade-in-sub"),
+                { opacity: 0, x: 250 },
+                { opacity: 1, x: "25%", duration: 0.5, stagger: 0.4 }
+            );
+            timeline.fromTo(
+                ref.current.querySelectorAll(".fade-in-content"),
+                { opacity: 0, y: 50, x: "25%" },
+                { opacity: 1, y: 0, x: "25%", duration: 0.5 }
+            );
+        });
 
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            mm.revert();
-            window.removeEventListener("resize", handleResize);
-        };
+        timeline.play();
     }, []);
 
     return (
